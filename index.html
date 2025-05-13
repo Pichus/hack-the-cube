@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/cube.png" type="image/png" sizes="32x32">
+    <link rel="stylesheet" href="css/pico/pico.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/6afcb13a2b.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Hack the cube</title>
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><b>КУБІК: hacker challange</b></li>
+        </ul>
+        <ul>
+          <li>
+            <a href="index.html" class="contrast" aria-current="page"
+              >Головна</a
+            >
+          </li>
+          <li><a href="guide.html" class="contrast">Гайд</a></li>
+          <li>
+            <button
+              data-target="modal-example"
+              onclick="toggleModal(event)"
+              href="#"
+            >
+              Аааа куди тикати???
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <dialog id="modal-example">
+        <article>
+          <header>
+            <button
+              aria-label="Close"
+              rel="prev"
+              data-target="modal-example"
+              onclick="toggleModal(event)"
+            ></button>
+            <h3>Крутюча підказка</h3>
+          </header>
+
+          <p>Пум пум пум, на сторінках з головками тут будуть корисні підказки, зустрінемось там :)</p>
+          <footer>
+            <button
+              role="button"
+              class="secondary"
+              data-target="modal-example"
+              onclick="toggleModal(event)"
+            >
+              Ага, ясно
+            </button>
+          </footer>
+        </article>
+      </dialog>
+    </header>
+
+    <main class="container">
+      <div class="grid">
+        <div><img src="img/print1.svg" alt="круюча картинка кубіка" /></div>
+        <div>
+          <h1>Ну привіт, абітурієнте!</h1>
+          <p>
+            Готовий спробувати себе в ролі хакера? <br /><br />
+            Пропонуємо тобі пройти невеличкий квест, де ти будеш вирішувати
+            різноманітні головоломки, шукаючи вразливості сайту на основі своїх
+            знань html, js та css. <br />
+            <br />
+            Не маєш потрібних знань? Не біда, навчимо!
+          </p>
+          <a role="button" class="secondary outline">
+            Почекай-но, а як сайти ламати...
+          </a>
+          <a role="button">Давай м'ясо!</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- <footer class="container">footer</footer> -->
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

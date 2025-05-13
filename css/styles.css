@@ -1,0 +1,48 @@
+/* ####################################################
+||                                                ||
+||  Це вже просто код сайту, тут нічого цікавого  ||
+||                                                ||
+#################################################### */
+
+.result {
+  * {
+    /*Reset's every elements apperance*/
+    background: none repeat scroll 0 0 transparent;
+    background-color: white;
+    color: black;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.42rem;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0;
+  }
+}
+
+.result-css {
+  background-color: pink !important;
+  padding: 15px !important;
+
+  & > h1 {
+    font-weight: bold;
+    font-size: 25px;
+    background-color: pink !important;
+    color: blueviolet !important;
+    font-family: Arial, sans-serif !important;
+  }
+
+  & > button {
+    background-color: purple; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+}

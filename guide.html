@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/cube.png" type="image/png" sizes="32x32" />
+    <link rel="stylesheet" href="css/pico/pico.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/6afcb13a2b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- code highlighting-->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark-reasonable.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <!-- / code highlighting-->
+    <title>Hack the cube | Guide</title>
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><strong>КУБІК: hacker challange</strong></li>
+        </ul>
+        <ul>
+          <li><a href="index.html" class="contrast">Головна</a></li>
+          <li>
+            <a href="guide.html" class="contrast" aria-current="page">Гайд</a>
+          </li>
+          <li>
+            <button
+              data-target="modal-example"
+              onclick="toggleModal(event)"
+              href="#"
+            >
+              Аааа куди тикати???
+            </button>
+          </li>
+        </ul>
+      </nav>
+            <dialog id="modal-example">
+        <article>
+          <header>
+            <button
+              aria-label="Close"
+              rel="prev"
+              data-target="modal-example"
+              onclick="toggleModal(event)"
+            ></button>
+            <h3>Крутюча підказка</h3>
+          </header>
+
+          <p>Пум пум пум, на сторінках з головками тут будуть корисні підказки, зустрінемось там :)</p>
+          <footer>
+            <button
+              role="button"
+              class="secondary"
+              data-target="modal-example"
+              onclick="toggleModal(event)"
+            >
+              Ага, ясно
+            </button>
+          </footer>
+        </article>
+      </dialog>
+    </header>
+
+    <main class="container">
+      <h1>Гайд</h1>
+      <hr />
+
+      <section>
+        <h2>Що таке сайт для браузера?</h2>
+        <p>
+          В основному це просто набір файликів з розширенням .html, .css та .js
+        </p>
+      </section>
+
+      <section>
+        <h2>Про html</h2>
+        <p>
+          Hypertext Markup Language. У html файликах розташовується розмітка
+          файлу, його "кістки"
+        </p>
+        <div class="grid">
+          <div>
+            <h4>Код</h4>
+            <code>index.html</code>
+            <pre><code class="language-html" id="html_code"></code></pre>
+          </div>
+          <div>
+            <h4>Результат</h4>
+            <div class="result">
+              <h1>Hello, world!</h1>
+              <button>Нажми на мене</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Про css</h2>
+        <p>
+          Cascading Style Sheets. У css файликах описується зовнішній вигляд
+          сайту. Наприклад, можна змініити колір елементу, його розташування на
+          екрані, розмір та багато іншого
+        </p>
+        <div class="grid">
+          <div>
+            <h4>Код</h4>
+            <code>styles.css</code>
+            <pre><code class="language-css" id="css_code"></code></pre>
+          </div>
+          <div>
+            <h4>Результат</h4>
+            <div class="result result-css">
+              <h1>Hello, world!</h1>
+              <button>Нажми на мене</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Про js</h2>
+        <p>
+          JavaScript. На відміну від html та css, js - це мова програмування, це
+          вам не іграшки. Завдяки js можна додавати інтерактивні елементи на
+          свій сайт, зробити так, щоб користувач почувався так, наче він
+          користується справжнім застосунком, а не просто сайтом.
+        </p>
+        <div class="grid">
+          <div>
+            <h4>Код</h4>
+            <code>index.js</code>
+            <pre><code class="language-js" id="js_code"></code></pre>
+          </div>
+          <div>
+            <h4>Результат</h4>
+            <div class="result result-css">
+              <h1 id="hello_text">Hello, world!</h1>
+              <button id="hello_button">Нажми на мене</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container">footer</footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/guide.js"></script>
+  </body>
+</html>
