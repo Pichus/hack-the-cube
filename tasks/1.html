@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/cube.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="../img/cube.png" type="image/png" sizes="32x32" />
     <link rel="stylesheet" href="../css/pico/pico.min.css" />
     <link rel="stylesheet" href="../css/styles.css" />
     <script
@@ -43,7 +43,7 @@
               data-target="modal-example"
               onclick="toggleModal(event)"
             ></button>
-            <h3>Крутюча підказка</h3>
+            <h3>Крутюча підказка №1</h3>
           </header>
 
           <p>
@@ -54,7 +54,6 @@
           <footer>
             <button
               role="button"
-              class="secondary"
               data-target="modal-example"
               onclick="toggleModal(event)"
             >
@@ -69,6 +68,8 @@
       <article>
         Ура! Ти успішно склав (склала) НМТ, настав час подати заявку на вступ до
         омріяного вузу на найкрутіший айті факультет 😎
+        <br />
+        Стоп... Кнопка надіслати не працює? 🤯
       </article>
 
       <h1>Заявка на вступ</h1>
@@ -91,12 +92,28 @@
             <input
               type="text"
               name="city"
-              placeholder="Введіть своє прізвище"
+              placeholder="Введіть назву міста, в якому проживаєте"
             />
           </label>
           <label>
+            Університет
+            <select disabled name="spec" aria-label="Обери університет">
+              <option selected>
+                Київський національний університет імені Тараса Шевченка
+              </option>
+            </select>
+          </label>
+          <label>
+            Факультет
+            <select disabled name="spec" aria-label="Обери університет">
+              <option selected>
+                Факультет комп'ютерних наук та кібернетики
+              </option>
+            </select>
+          </label>
+          <label>
             Спеціальність
-            <select name="spec" aria-label="Обери спеціальність" required>
+            <select name="spec" aria-label="Обери спеціальність">
               <option selected disabled value="">Оберіть спеціальність</option>
               <option>Комп’ютерні науки</option>
               <option>Програмна інженерія</option>
@@ -111,11 +128,15 @@
           сертифікату НМТ завантажено успішно
         </article>
 
+        <p>
+          *Ми не зберігаємо ці дані, якщо що :)
+          <br />
+          *Хехе, а вступати-то можна тільки до нас
+        </p>
+
         <button disabled type="submit">Надіслати</button>
       </form>
     </main>
-
-    <!-- <footer class="container">footer</footer> -->
 
     <script src="../js/task1.js"></script>
     <script src="../js/index.js"></script>

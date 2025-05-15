@@ -8,6 +8,14 @@
 ||                                                ||
 #################################################### */
 
+.text-center {
+  text-align: center;
+}
+
+table.mail-table > tbody > tr {
+  cursor: pointer;
+}
+
 .result {
   * {
     /*Reset's every elements apperance*/

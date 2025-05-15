@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/cube.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="../img/cube.png" type="image/png" sizes="32x32" />
     <link rel="stylesheet" href="../css/pico/pico.min.css" />
+    <link rel="stylesheet" href="../css/pico/pico.colors.min.css" />
     <link rel="stylesheet" href="../css/styles.css" />
     <script
       src="https://kit.fontawesome.com/6afcb13a2b.js"
@@ -20,11 +21,9 @@
         </ul>
         <ul>
           <li>
-            <a href="index.html" class="contrast" aria-current="page"
-              >Головна</a
-            >
+            <a href="../index.html" class="contrast">Головна</a>
           </li>
-          <li><a href="guide.html" class="contrast">Гайд</a></li>
+          <li><a href="../guide.html" class="contrast">Гайд</a></li>
           <li>
             <button
               data-target="modal-example"
@@ -45,18 +44,17 @@
               data-target="modal-example"
               onclick="toggleModal(event)"
             ></button>
-            <h3>Крутюча підказка</h3>
+            <h3>Крутюча підказка №2</h3>
           </header>
 
           <p>
-            Не натискається кнопка? От біда, схоже, вона disabled (українською
-            вимкнена). Відкрий інструменти розробки та спробуй знайти і видалити
-            деталь, що робить цю кнопку вимкненою
+            Кнопка не disabled, в html все нормально. Схоже, слід заглянути в
+            код на js. Уважно пройдись очима по коду у файлі task2.js, можливо,
+            програміст зробив десь помарку і неправильно написав ім'я змінної
           </p>
           <footer>
             <button
               role="button"
-              class="secondary"
               data-target="modal-example"
               onclick="toggleModal(event)"
             >
@@ -68,55 +66,63 @@
     </header>
 
     <main class="container" id="main">
-      <article>Друге завдання</article>
+      <article>
+        Ти успішно подав свою заявку на вступ. Тепер ти щосекунди все натискаєш
+        і натискаєш на кнопку "Оновити пошту", а листа про успішний вступ все
+        немає... Не може цього бути, ти ж ідеально склав нмт, тебе ну просто
+        <b>повинні</b> прийняти. Схоже, програмісти наробили помилок в коді 😭
+      </article>
 
-      <h1>Заявка на вступ</h1>
-      <form id="form">
-        <fieldset>
-          <label>
-            Імʼя
-            <input name="first_name" placeholder="Введіть своє імʼя" />
-          </label>
-          <label>
-            Прізвище
-            <input
-              type="text"
-              name="surname"
-              placeholder="Введіть своє прізвище"
-            />
-          </label>
-          <label>
-            Місто
-            <input
-              type="text"
-              name="city"
-              placeholder="Введіть своє прізвище"
-            />
-          </label>
-          <label>
-            Спеціальність
-            <select name="spec" aria-label="Обери спеціальність" required>
-              <option selected disabled value="">Оберіть спеціальність</option>
-              <option>Комп’ютерні науки</option>
-              <option>Програмна інженерія</option>
-              <option>Прикладна математика</option>
-              <option>Системний аналіз</option>
-            </select>
-          </label>
-        </fieldset>
+      <hr />
 
-        <article>
-          <i class="fa-solid fa-file-arrow-up"></i> Файли документів та
-          сертифікату НМТ завантажено успішно
-        </article>
-
-        <button type="submit">Надіслати</button>
-      </form>
+      <section>
+        <nav>
+          <ul>
+            <li>
+              <strong><i class="fa-solid fa-envelope"></i> КУБІКmail</strong>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <input
+                type="search"
+                name="search"
+                placeholder="Пошук у пошті"
+                aria-label="Search"
+              />
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#" class="contrast" id="refresh"
+                ><i class="fa-solid fa-rotate-right"></i> Оновити пошту</a
+              >
+            </li>
+            <li>
+              <a href="#" class="contrast"><i class="fa-solid fa-gear"></i></a>
+            </li>
+            <li>
+              <a href="#" class="contrast"><i class="fa-solid fa-user"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section>
+        <table class="mail-table" id="mail_table">
+          <thead>
+            <tr>
+              <th scope="col">Відправник</th>
+              <th scope="col">Тема листа</th>
+              <th scope="col">Дата відправлення</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p class="text-center" id="no_mail_text">Вхідних листів немає :(</p>
+      </section>
     </main>
 
-    <!-- <footer class="container">footer</footer> -->
-
-    <script src="../js/task1.js"></script>
+    <script src="../js/task2.js"></script>
     <script src="../js/index.js"></script>
   </body>
 </html>
