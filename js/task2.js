@@ -29,8 +29,8 @@ let currentUserMail = [
   new Letter(
     "Студпарламент ФКНК",
     "Крутючий абітурієнтський чат в тг",
-    "Приєднуйся до абітчату!",
-    "https://t.me/abit_cyberknu_2025"
+    "Приєднуйся до нашого абітурієнтського чату...",
+    "../mail/spf-letter.html"
   ),
 ];
 
@@ -90,6 +90,12 @@ function getCurrentDateText() {
 
 function letterClick(letterId) {
   let link = currentUserMail[letterId].link;
+
+  if (letterId == 1) {
+    window.open(link, "_blank");
+    return;
+  }
+
   window.location.replace(link);
 }
 

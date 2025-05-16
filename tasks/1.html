@@ -16,7 +16,9 @@
     <header class="container">
       <nav>
         <ul>
-          <li><b>КУБІК: hacker challange</b></li>
+          <li>
+            <b><i class="fa-solid fa-code"></i> КУБІК: hacker challange</b>
+          </li>
         </ul>
         <ul>
           <li>
@@ -47,9 +49,9 @@
           </header>
 
           <p>
-            Не натискається кнопка? От біда, схоже, вона disabled (українською
-            вимкнена). Відкрий інструменти розробки та спробуй знайти і видалити
-            деталь, що робить цю кнопку вимкненою
+            Не натискається кнопка? От біда, схоже, вона disabled (з англ.:
+            вимкнена). Відкрий інструменти розробки (F12) та спробуй знайти і
+            видалити деталь, через яку ця кнопка не працює.
           </p>
           <footer>
             <button
@@ -77,15 +79,30 @@
         <fieldset>
           <label>
             Імʼя
-            <input name="first_name" placeholder="Введіть своє імʼя" />
+            <input
+              name="firstName"
+              placeholder="Введіть своє імʼя"
+              required
+              aria-describedby="name-helper"
+            />
+            <small id="name-helper">
+              *Ваше ім'я потрібне для подальших завдань
+            </small>
           </label>
           <label>
             Прізвище
             <input
               type="text"
-              name="surname"
+              name="lastName"
               placeholder="Введіть своє прізвище"
+              required
+              aria-describedby="surname-helper"
             />
+            <small id="surname-helper">
+              *Прізвище теж. Не бійтесь, ці дані зберігаються локально і
+              використовуються лише для завдань. Після проходження квесту дані
+              буде знищено
+            </small>
           </label>
           <label>
             Місто
@@ -93,7 +110,11 @@
               type="text"
               name="city"
               placeholder="Введіть назву міста, в якому проживаєте"
+              aria-describedby="сity-helper"
             />
+            <small id="сity-helper">
+              *А це ми взагалі ніяк не зберігаємо
+            </small>
           </label>
           <label>
             Університет
@@ -127,12 +148,6 @@
           <i class="fa-solid fa-file-arrow-up"></i> Файли документів та
           сертифікату НМТ завантажено успішно
         </article>
-
-        <p>
-          *Ми не зберігаємо ці дані, якщо що :)
-          <br />
-          *Хехе, а вступати-то можна тільки до нас
-        </p>
 
         <button disabled type="submit">Надіслати</button>
       </form>

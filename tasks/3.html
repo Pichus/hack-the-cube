@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../img/cube.png" type="image/png" sizes="32x32" />
+    <link rel="stylesheet" href="../css/pico/pico.min.css" />
+    <link rel="stylesheet" href="../css/pico/pico.colors.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/6afcb13a2b.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Hack the cube</title>
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li>
+            <b><i class="fa-solid fa-code"></i> КУБІК: hacker challange</b>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="../index.html" class="contrast">Головна</a>
+          </li>
+          <li><a href="../guide.html" class="contrast">Гайд</a></li>
+          <li>
+            <button
+              data-target="modal-example"
+              onclick="toggleModal(event)"
+              href="#"
+            >
+              Аааа куди тикати???
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <dialog id="modal-example">
+        <article>
+          <header>
+            <button
+              aria-label="Close"
+              rel="prev"
+              data-target="modal-example"
+              onclick="toggleModal(event)"
+            ></button>
+            <h3>Крутюча підказка №3</h3>
+          </header>
+
+          <p>
+            Використай Inspect, знайди елементи з класом real-class, вони
+            містять у собі потрібну інформацію. На місці знаків питання введи
+            справжні предмети та їх викладачів
+          </p>
+          <footer>
+            <button
+              role="button"
+              data-target="modal-example"
+              onclick="toggleModal(event)"
+            >
+              Ага, ясно
+            </button>
+          </footer>
+        </article>
+      </dialog>
+    </header>
+
+    <main class="container" id="main">
+      <article>
+        Отакої, перший тиждень, а студенти вже почали прогулювати, от же ж
+        безстрашні. Тебе це звісно не стосується, ти пари відвідуєш
+        <i>(правда ж?)</i>, але адміністрація запустила для всіх тестування, яке
+        має перевірити чи справді ти був на парах. Потрібно всього лиш відновити
+        вчорашній розклад 😁
+      </article>
+
+      <hr />
+
+      <section>
+        <nav>
+          <ul>
+            <li>
+              <strong
+                ><i class="fa-solid fa-building-columns"></i> КУБІКon</strong
+              >
+            </li>
+            <li>
+              <a href="#" class="contrast" aria-current="page">Розклад</a>
+            </li>
+            <li>
+              <a href="#" class="contrast">Вибір</a>
+            </li>
+            <li>
+              <a href="#" class="contrast">Навчальний процес</a>
+            </li>
+            <li>
+              <a href="#" class="contrast">Новини</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#" class="contrast"
+                ><i class="fa-solid fa-envelope"></i>Пошта</a
+              >
+            </li>
+            <li>
+              <a href="#" class="contrast">Налаштування</a>
+            </li>
+            <li>
+              <a href="#" class="contrast">Вихід</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <section>
+        <h4>Розклад групи К-16 | 4 вересня 2025</h4>
+        <table class="">
+          <thead>
+            <tr>
+              <th scope="col">№</th>
+              <th scope="col">Час</th>
+              <th scope="col">Дисципліна</th>
+              <th scope="col">Викладач</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>
+                8.40-9.25
+                <br />
+                9.30-10.15
+              </td>
+              <td id="subject">
+                <input placeholder="?????????????" />
+              </td>
+              <td id="teacher">
+                <input placeholder="?????????????" />
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>
+                10.35-11.20
+                <br />
+                11.25-12.10
+              </td>
+              <td id="subject">
+                <input placeholder="?????????????" />
+              </td>
+              <td id="teacher">
+                <input placeholder="?????????????" />
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>
+                12.20-13.05
+                <br />
+                13.10-13.55
+              </td>
+              <td id="subject">
+                <input placeholder="?????????????" autocomplete="given-name" />
+              </td>
+              <td id="teacher">
+                <input placeholder="?????????????" autocomplete="given-name" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <button id="validate_schedule">Перевірити</button>
+      </section>
+    </main>
+
+    <footer>
+      <div class="real-schedule">
+        <span
+          class="real-class"
+          data-name="Дискретна математика"
+          data-teacher="Джордж Буль"
+        ></span>
+        <span
+          class="real-class"
+          data-name="Програмування"
+          data-teacher="Б'ярн Страуструп"
+        ></span>
+        <span
+          class="real-class"
+          data-name="Комп'ютерні мережі"
+          data-teacher="Лінус Торвальдс"
+        ></span>
+      </div>
+    </footer>
+
+    <script src="../js/task3.js"></script>
+    <script src="../js/index.js"></script>
+  </body>
+</html>
