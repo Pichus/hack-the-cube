@@ -1,3 +1,11 @@
+// ####################################################
+// ||                                                ||
+// ||  Це вже просто код сайту, тут нічого цікавого  ||
+// ||                                                ||
+// ####################################################
+
+
+
 let formElement = document.getElementById("form");
 let mainElement = document.getElementById("main");
 let loadingElementCode =

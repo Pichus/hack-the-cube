@@ -1,3 +1,10 @@
+// ####################################################
+// ||                                                ||
+// ||  Це вже просто код сайту, тут нічого цікавого  ||
+// ||                                                ||
+// ####################################################
+
+
 import { fakerUK } from "https://esm.sh/@faker-js/faker";
 
 localStorage.setItem("Математичний аналіз", "76");
@@ -47,20 +54,40 @@ function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-function generateRandomStudent() {
+function generateRandomStudent(
+  isScholarshipRecipient = false,
+  currentUserAverageScore = 0
+) {
+  currentUserAverageScore = Math.floor(currentUserAverageScore);
+
   let gender = fakerUK.person.gender();
   let firstName = fakerUK.person.firstName(gender);
   let lastName = fakerUK.person.lastName(gender);
-  let score = getRandomArbitrary(60, 100).toFixed(2);
+
+  let rangeFrom = 60;
+  let rangeTo = currentUserAverageScore - 1;
+
+  if (isScholarshipRecipient) {
+    rangeFrom = currentUserAverageScore + 1;
+    rangeTo = 100;
+  }
+
+  let score = getRandomArbitrary(rangeFrom, rangeTo).toFixed(2);
 
   return new Student(firstName, lastName, score);
 }
 
-function generateStudentList(numberOfStudents) {
+function generateStudentList(numberOfStudents, scholarshipRecipientCount) {
   let studentList = [];
 
+  let currentStudentAverageScore = getCurrentStudent().score;
+
   for (let i = 0; i < numberOfStudents; i++) {
-    let student = generateRandomStudent();
+    let isScholarshipRecipient = i < scholarshipRecipientCount;
+    let student = generateRandomStudent(
+      isScholarshipRecipient,
+      currentStudentAverageScore
+    );
     studentList.push(student);
   }
 
@@ -91,12 +118,7 @@ function getCurrentStudent() {
     subjectScores.reduce((a, b) => a + b) / subjectScores.length;
   averageScore = averageScore.toFixed(2);
 
-  let currentStudent = new Student(
-    firstName,
-    lastName,
-    averageScore,
-    true
-  );
+  let currentStudent = new Student(firstName, lastName, averageScore, true);
 
   return currentStudent;
 }
@@ -127,7 +149,7 @@ function taskCompleted() {
   }, 2000);
 }
 
-let studentList = generateStudentList(49);
+let studentList = generateStudentList(49, 10);
 
 renderStudentRowElements(studentList);
 

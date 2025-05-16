@@ -13,27 +13,33 @@
     <title>Hack the cube | Guide</title>
   </head>
   <body>
-    <header class="container">
-      <nav>
-        <ul>
-          <li><strong>КУБІК: hacker challange</strong></li>
-        </ul>
-        <ul>
-          <li><a href="index.html" class="contrast">Головна</a></li>
-          <li>
-            <a href="guide.html" class="contrast" aria-current="page">Гайд</a>
-          </li>
-          <li>
-            <button
-              data-target="modal-example"
-              onclick="toggleModal(event)"
-              href="#"
-            >
-              Аааа куди тикати???
-            </button>
-          </li>
-        </ul>
-      </nav>
+    <main class="container">
+      <section></section>
+      <section>
+        <h3>🎉 ФІНІШ! 🎉</h3>
+        <p>
+          Ти офіційно пройшов наш хакер-квест і твій мозок не встиг звернутися в
+          бантик!
+          <br /><br />
+          Ти не просто пройшов квест — ти довів, що маєш все, аби вижити на
+          нашому факультеті: логіку, гумор і витримку більшу, ніж у ноутбука з
+          Windows XP.
+          <br /><br />
+          Залітаємо в нове студентське життя — буде місцями жорстко, весело і з
+          багами, але ти вже показав, що тобі все по плечу.
+          <br /><br />
+          Ти свій. Вітаємо в зграї. Хакнув систему — хакнеш і навчання.
+        </p>
+      </section>
+      <div class="firework"></div>
+      <div class="firework"></div>
+      <div class="firework"></div>
+      <div class="firework"></div>
+      <div class="firework"></div>
+      <div class="firework"></div>
+    </main>
+
+    <footer>
       <dialog id="modal-example">
         <article>
           <header>
@@ -43,31 +49,25 @@
               data-target="modal-example"
               onclick="toggleModal(event)"
             ></button>
-            <h3>Крутюча підказка №0</h3>
+            <p>
+              <strong
+                ><i class="fa-solid fa-award"></i> АЧІВКА ОТРИМАНА:
+                "Студент-Фенікс"</strong
+              >
+            </p>
           </header>
-
-          <p>
-            Пум пум пум, на сторінках з головками тут будуть корисні підказки,
-            зустрінемось там :)
-          </p>
-          <footer>
-            <button
-              role="button"
-              class="secondary"
-              data-target="modal-example"
-              onclick="toggleModal(event)"
-            >
-              Ага, ясно
-            </button>
-          </footer>
+          <p>Повстає з попелу дедлайнів і факапів.</p>
+          <img src="img/coolcat.gif" alt="" />
         </article>
       </dialog>
-    </header>
+    </footer>
 
-    <main class="container">
-      ГОООООООЛ
-    </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+    <script>
+      const container = document.querySelector(".fireworkss");
+      const fireworks = new Fireworks.default(container);
+      fireworks.start();
+    </script>
     <script src="js/index.js"></script>
     <script src="js/finish.js"></script>
   </body>
